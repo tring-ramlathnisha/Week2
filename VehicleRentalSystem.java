@@ -61,7 +61,7 @@ public class VehicleRentalSystem {
         }
     }
 
-    // ✅ Rent a Vehicle with Exception Handling
+    //  Rent a Vehicle with Exception Handling
     private static void rentVehicle(Scanner scanner, RentalService rentalSystem) {
         System.out.print("Enter the vehicle brand: ");
         String vehicleBrand = scanner.nextLine().trim();
@@ -87,7 +87,7 @@ public class VehicleRentalSystem {
         System.out.println("Total Rental Cost: $" + totalRentalCost);
     }
 
-    // ✅ Return a Vehicle with Exception Handling
+    //  Return a Vehicle with Exception Handling
     private static void returnVehicle(Scanner scanner, RentalService rentalSystem) {
         System.out.print("Enter the vehicle brand: ");
         String vehicleBrand = scanner.nextLine().trim();
@@ -109,7 +109,7 @@ public class VehicleRentalSystem {
         System.out.println("Vehicle returned successfully.");
     }
 
-    // ✅ Add a Vehicle with Exception Handling
+    //  Add a Vehicle with Exception Handling
     private static void addVehicle(Scanner scanner, RentalService rentalSystem) {
         System.out.print("Enter the vehicle type (Car/Bike): ");
         String vehicleType = scanner.nextLine().trim();
@@ -142,7 +142,7 @@ public class VehicleRentalSystem {
         System.out.println("Vehicle added successfully.");
     }
 
-    // ✅ Remove a Vehicle with Exception Handling
+    // Remove a Vehicle with Exception Handling
     private static void removeVehicle(Scanner scanner, RentalService rentalSystem) {
         System.out.print("Enter the vehicle brand: ");
         String vehicleBrand = scanner.nextLine().trim();
@@ -164,7 +164,7 @@ public class VehicleRentalSystem {
         System.out.println("Vehicle removed successfully.");
     }
 
-    // ✅ Update Rental Cost with Exception Handling
+    //  Update Rental Cost with Exception Handling
     private static void updateRentalCost(Scanner scanner, RentalService rentalSystem) {
         System.out.print("Enter brand: ");
         String brandName = scanner.nextLine().trim();
@@ -187,7 +187,7 @@ public class VehicleRentalSystem {
         System.out.println("Updated successfully.");
     }
 
-    // ✅ Helper Methods for Valid Inputs
+    // Helper Methods for Valid Inputs
     private static int getValidInt(Scanner scanner, String message, int min, int max) {
         while (true) {
             try {
