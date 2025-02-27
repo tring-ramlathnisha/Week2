@@ -41,6 +41,23 @@ public class RentalService {
   
  }
  
+ public Vehicle findVehicle(RentalService rentalsystem,String variable,String brandName,String ModelName){
+   List<Vehicle> vehicleList; 
+   Vehicle selectedVehicle=null;
+    if(variable.equalsIgnoreCase("rented")){
+        vehicleList=rentalsystem.getRentedVehicles();
+    }
+    else{
+        vehicleList=rentalsystem.getAvailableVehicles();
+    }
+    for(Vehicle vehicle:vehicleList){
+        if(vehicle.getMake().equalsIgnoreCase(brandName) && vehicle.getModel().equalsIgnoreCase(ModelName)){
+            selectedVehicle=vehicle;
+        }
+    }
+    return selectedVehicle;
+ }
+ 
  //to return rented vehicle
  public void returnVehicle(Vehicle vehicle) {
     try {
@@ -71,17 +88,20 @@ public void removeVehicle(Vehicle vehicle) {
  //To display available and rented vehicles
  public void displayRentalInfo() {
   System.out.println("Available vehicles: ");
-  for(Vehicle av : availableVehicles) {
-   av.displayInfo();
+  for(Vehicle availaVehicle : availableVehicles) {
+   availaVehicle.displayInfo();
    System.out.println();
   }
   
   System.out.println("Rented vehicles: ");
-  for(Vehicle rv : rentedVehicles) {
-   rv.displayInfo();
+  for(Vehicle rentedVehicle : rentedVehicles) {
+   rentedVehicle.displayInfo();
    System.out.println();
   }
  }
+ 
+
+
  
  //To calculate total rental cost
  public double calculateRentalCost(Vehicle vehicle, int rentalDuration) {

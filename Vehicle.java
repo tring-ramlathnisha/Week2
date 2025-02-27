@@ -1,14 +1,14 @@
 public class Vehicle {
  private String brand;
  private String model;
- private int year;
+ private int yearOfEstablishment;
  private double rentalRate;
  private String vehicle_type;
  
- public Vehicle( String vehicle_type,String make, String model, int year, double rentalRate){
-  this.brand=make;
+ public Vehicle( String vehicle_type,String brand, String model, int yearOfEstablishment, double rentalRate){
+  this.brand=brand;
   this.model = model;
-  this.year = year;
+  this.yearOfEstablishment = yearOfEstablishment;
   this.rentalRate = rentalRate;
   this.vehicle_type=vehicle_type;
  }
@@ -17,7 +17,7 @@ public class Vehicle {
   System.out.println("Vehicle Type: " +vehicle_type);
   System.out.println("Brand: " + brand);
   System.out.println("Model " + model);
-  System.out.println("Year: " + year);
+  System.out.println("Year: " + yearOfEstablishment);
   System.out.println("Rental Rate: " + rentalRate);
  }
  
@@ -34,5 +34,8 @@ public class Vehicle {
  }
   public String getType() {
   return vehicle_type;
+ }
+ public void updateRentalCost(Double rentalRate){
+    this.rentalRate=rentalRate;
  }
 }
